@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建和删除命令集合</title>
+</head>
+<body>
+1.连接mongodb
+mongod --dbpath 数据库存放的文件位置(例如：c:\db)
+①通过运行bin/mongo.exe打开命令行
+②使用robomongo连接数据库
+2.查看所有的数据库列表
+show dbs
+3.创建和使用数据库
+use 数据库名称(如果没有的话，就新建一个)
+4.查看当前所在的数据库
+db
+5.删除数据库
+db.drop database()
+6.创建集合
+db.createCollection()创建集合
+7.删除集合
+db.collection.drop()删除集合
+</body>
+</html>

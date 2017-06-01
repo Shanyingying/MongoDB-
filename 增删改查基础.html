@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增</title>
+</head>
+<body>
+插入的语法规则：db.COLLECTION_NAME.insert(document)
+修改的语法规则：db.COLLECTION_NAME.update(<query>,<update>,{可选参数update,multi})query 查询条件 update更新结果
+    query : update的查询条件，类似sql update查询内where后面的。
+    update : update的对象和一些更新的操作符（如$,$inc...）等，也可以理解为sql update查询内set后面的
+    upsert : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。
+    multi : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。
+    writeConcern :可选，抛出异常的级别。
+    删除的语法规则：db.COLLECTION_NAME.remove(<query>,justOne)默认删除所有满足条件的数据，如果第二个参数为true或者1，
+        则删除第一条，直接调用db.COLLECTION.remove({})会删除集合所有数据。
+</body>
+</html>
